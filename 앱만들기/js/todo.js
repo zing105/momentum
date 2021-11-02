@@ -15,9 +15,13 @@ function saveToDos(){               //JSON.stringify 은 자스 어떤코드든 
 //버튼지우기 이벤트 타켓
 function deleteToDo(event){
     //console.dir 상세정보
-                            //parentElement 는 element 의부모
+                           //parentElement 는 element 의부모
  const D_li = event.target.parentElement;
  D_li.remove()
+ console.log(D_li.id);
+ toDos = toDos.filter(hia => hia.id !== parseInt(D_li.id)); // 우리가 클릭한 li.id와 다른 hia 는 남기고싶다
+ 
+ saveToDos();
 }
 
 
@@ -25,6 +29,7 @@ function deleteToDo(event){
 
 function paintToDo(newTodo){
     const li = document.createElement("li"); //li 만들기
+    li.id = newTodo.id;
     const span = document.createElement("span"); //span 만들기
     span.innerText = newTodo.text;
 
@@ -60,6 +65,7 @@ function handleTodoSubmit(e){
                 };
     toDos.push(newTodoObj);
     paintToDo(newTodoObj);
+            console.log(newTodoObj.id);
     saveToDos();
 }
 toDoForm.addEventListener("submit", handleTodoSubmit);
@@ -80,4 +86,8 @@ if(savedToDos != null){
                 //forEach 로컬스토리지에있는 아이템 스트링을 어레이로 변환 사용
     parsedToDos.forEach(paintToDo);
     //parsedToDos 아이템에 대해서       콘솔로그를 할것이다라는뜻      => 는 화살표 함수 실행
+}
+
+function sexyFilter(){
+
 }
