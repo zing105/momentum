@@ -5,13 +5,11 @@ const images = [
 ]
 
 const chosenImage = images [Math.floor (Math.random() * images.length)]
-
+console.log(images);
 
 //이미지를 만들어냄 <img>  크레이티브엘리먼트
 const bgImage = document.createElement("img");
-
-
-
+//이미지 src 링크 
 bgImage.src = `img/${chosenImage}`;
 
 

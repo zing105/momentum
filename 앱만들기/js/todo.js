@@ -19,7 +19,7 @@ function deleteToDo(event){
  const D_li = event.target.parentElement;
  D_li.remove()
  console.log(D_li.id);
- toDos = toDos.filter(hia => hia.id !== parseInt(D_li.id)); // 우리가 클릭한 li.id와 다른 hia 는 남기고싶다
+ toDos = toDos.filter((hia) => hia.id !== parseInt(D_li.id)); // 우리가 클릭한 li.id와 다른 hia 는 남기고싶다
  
  saveToDos();
 }
