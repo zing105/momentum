@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/momentum/static/js/main.43d2cd50.js",
-    "index.html": "/momentum/index.html",
-    "main.43d2cd50.js.map": "/momentum/static/js/main.43d2cd50.js.map"
+    "main.js": "/momentum.git/static/js/main.c5b8f798.js",
+    "index.html": "/momentum.git/index.html",
+    "main.c5b8f798.js.map": "/momentum.git/static/js/main.c5b8f798.js.map"
   },
   "entrypoints": [
-    "static/js/main.43d2cd50.js"
+    "static/js/main.c5b8f798.js"
   ]
 }
